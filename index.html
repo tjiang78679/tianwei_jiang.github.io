@@ -4,14 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tianwei Jiang</title>
+  <style>
+    body { max-width: 820px; margin: 56px auto; padding: 0 24px; color: #222; font: 16px/1.6 Arial, sans-serif; }
+    header { display: flex; align-items: center; gap: 28px; margin-bottom: 30px; }
+    .photo { width: 130px; height: 160px; object-fit: cover; background: #f2f2f2; border: 1px solid #ddd; }
+    h1 { margin: 0 0 5px; font-size: 30px; }
+    h2 { margin: 0 0 12px; font-size: 21px; }
+    h3 { margin: 0; font-size: 16px; }
+    p { margin: 7px 0; }
+    section { border-top: 1px solid #ddd; padding: 20px 0; }
+    .item { margin: 0 0 13px; }
+    .meta { color: #555; font-size: 14px; }
+    ul { padding-left: 20px; margin: 8px 0; }
+    li { margin: 6px 0; }
+    a { color: #145da0; }
+    @media (max-width: 520px) {
+      body { margin-top: 32px; }
+      header { align-items: flex-start; gap: 16px; }
+      .photo { width: 95px; height: 120px; }
+      h1 { font-size: 25px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Tianwei Jiang</h1>
-  <p>Ph.D. student in Electrical and Computer Engineering at Georgia Tech.</p>
-  <p>Research: audio perception, spatial audio, and multimodal learning.</p>
-  <p>
-    <a href="Tianwei_Jiang_dolby_resume.pdf">CV (PDF)</a> ·
-    <a href="mailto:tjiang78@gatech.edu">Email</a>
-  </p>
+  <header>
+    <img class="photo" src="profile.jpg" alt="Photo of Tianwei Jiang">
+    <div>
+      <h1>Tianwei Jiang</h1>
+      <p>Ph.D. student in Electrical and Computer Engineering<br>Georgia Institute of Technology</p>
+      <p><a href="Tianwei_Jiang_dolby_resume.pdf">CV (PDF)</a> · <a href="mailto:tjiang78@gatech.edu">Email</a></p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>I am a Ph.D. student in ECE at Georgia Tech. I received my B.S. in Audio and Music Engineering and B.A. in Mathematics from the University of Rochester.</p>
+      <p>My research interests include audio perception, sound event detection, sound source localization and spatial audio, audio-visual learning, and multimodal machine learning. I am especially interested in building audio-centered systems that work reliably in real-world settings.</p>
+      <p>Outside research, I love K-pop and play piano, classical guitar, and drums. I also enjoy badminton, tennis, and skiing.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <h3>Georgia Institute of Technology</h3>
+        <div class="meta">Ph.D. in Electrical and Computer Engineering · Aug. 2024–present</div>
+      </div>
+      <div class="item">
+        <h3>University of Rochester</h3>
+        <div class="meta">B.S. in Audio and Music Engineering; B.A. in Mathematics · Aug. 2018–May 2022</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Employment</h2>
+      <div class="item">
+        <h3>Graduate Research Assistant · Georgia Institute of Technology</h3>
+        <div class="meta">Aug. 2024–present · Atlanta, GA</div>
+        <p>Research in audio-visual localization, bioacoustics, and multimodal analysis of speech and behavior.</p>
+      </div>
+      <div class="item">
+        <h3>Audio Software Engineer Intern · Dolby Laboratories</h3>
+        <div class="meta">May 2025–May 2026 · San Francisco, CA / Atlanta, GA</div>
+        <p>Worked on sound source elevation and spatial audio, including binaural features, ear-shape analysis, and localization algorithms.</p>
+      </div>
+      <div class="item">
+        <h3>Audio Lab Engineer · Agora Inc.</h3>
+        <div class="meta">Jan. 2023–Aug. 2024 · Shanghai, China</div>
+        <p>Developed audio quality evaluation and automated testing systems for mobile and embedded platforms.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Selected Papers</h2>
+      <ul>
+        <li>“Human-in-the-Loop Active Learning for Rare Poultry Vocalization Discovery in Long-Term Farm Recordings.” <span class="meta">IEEE MLSP 2026, published.</span></li>
+        <li>“Modality Compensation via Explicit Audio-Visual Correspondence for Multi-Source Sound Localization.” <span class="meta">Submitted to ICASSP 2027.</span></li>
+        <li>“Automatic Discovery of Mixed Call Types and Soft-Label Learning for Pekin Duck Vocalization Classification.” <span class="meta">Submitted to ICASSP 2027.</span></li>
+        <li>“Generalizable HRTF Elevation Modeling Using Relative Binaural Magnitude and Group Delay.” <span class="meta">With Dolby Laboratories; submitted to ICASSP 2027.</span></li>
+        <li>“Elevated Sources and HRTFs: A Boundary Element Study of Ear Shape and Spectral Cues.” <span class="meta">With Dolby Laboratories; under review at JASA.</span></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
