@@ -3,44 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tianwei Jiang, Ph.D. student in Electrical and Computer Engineering at Georgia Tech.">
   <title>Tianwei Jiang</title>
   <style>
-    body { max-width: 820px; margin: 56px auto; padding: 0 24px; color: #222; font: 16px/1.6 Arial, sans-serif; }
-    header { display: flex; align-items: center; gap: 28px; margin-bottom: 30px; }
-    .photo { width: 130px; height: 160px; object-fit: cover; background: #f2f2f2; border: 1px solid #ddd; }
-    h1 { margin: 0 0 5px; font-size: 30px; }
-    h2 { margin: 0 0 12px; font-size: 21px; }
-    h3 { margin: 0; font-size: 16px; }
-    p { margin: 7px 0; }
-    section { border-top: 1px solid #ddd; padding: 20px 0; }
-    .item { margin: 0 0 13px; }
-    .meta { color: #555; font-size: 14px; }
-    ul { padding-left: 20px; margin: 8px 0; }
-    li { margin: 6px 0; }
-    a { color: #145da0; }
-    @media (max-width: 520px) {
-      body { margin-top: 32px; }
-      header { align-items: flex-start; gap: 16px; }
-      .photo { width: 95px; height: 120px; }
-      h1 { font-size: 25px; }
+    :root {
+      --bg: #f1f1ed;
+      --paper: #fffefa;
+      --ink: #111111;
+      --body: #202020;
+      --muted: #4f4f4f;
+      --blue: #365f7a;
+      --line: #c9cecf;
     }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background-color: var(--bg);
+      background-image: radial-gradient(rgba(45, 54, 58, .07) .5px, transparent .65px);
+      background-size: 10px 10px;
+      color: var(--body);
+      font: 16px/1.65 "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+    }
+    .page {
+      width: min(860px, calc(100% - 36px));
+      margin: 38px auto;
+      padding: 42px 54px 34px;
+      background: var(--paper);
+      border-top: 3px solid var(--blue);
+      box-shadow: 0 2px 10px rgba(57, 73, 82, .035);
+    }
+    header { display: flex; align-items: center; gap: 30px; padding-bottom: 30px; }
+    .portrait-wrap {
+      flex: 0 0 auto;
+      width: 138px;
+      height: 160px;
+    }
+    .portrait, .portrait-placeholder {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      background: #f1f1ef;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+    .portrait-placeholder {
+      display: grid;
+      place-items: center;
+      color: #555555;
+      font: 12px "Avenir Next", Avenir, sans-serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .portrait {
+      object-fit: cover;
+      object-position: center;
+    }
+    h1, h2, h3 { color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+    h1 { margin: 0; font: 600 38px/1.1 "Bradley Hand", "Segoe Print", "Comic Sans MS", cursive; letter-spacing: -.025em; }
+    .name-line { display: flex; align-items: center; gap: 13px; margin-bottom: 8px; }
+    .cat-sticker { width: 54px; height: 50px; flex: 0 0 auto; overflow: visible; }
+    .cat-tail { transform-box: view-box; transform-origin: 59px 47px; animation: tail-swish 2.4s ease-in-out infinite; }
+    @keyframes tail-swish { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(8deg); } }
+    .role { margin: 0; color: var(--muted); font-size: 14px; }
+    .links { display: flex; flex-wrap: wrap; gap: 8px 17px; margin-top: 17px; font-size: 13px; }
+    a { color: #111111; text-decoration: none; border-bottom: 1px solid #666666; }
+    a:hover { color: #444444; border-color: currentColor; }
+    section { border-top: 1px solid var(--line); padding: 23px 0; }
+    h2 { margin: 0 0 12px; font-size: 22px; }
+    h3 { margin: 0; font-size: 17px; }
+    p { margin: 7px 0; }
+    .item { margin: 0 0 15px; }
+    .item:last-child { margin-bottom: 0; }
+    .meta { color: var(--muted); font-size: 13px; }
+    .papers { padding-left: 19px; margin: 0; }
+    .papers li { padding-left: 4px; margin: 0 0 10px; }
+    .papers li:last-child { margin-bottom: 0; }
+    .paper-status { color: var(--muted); font-size: 13px; }
+    footer { border-top: 1px solid var(--line); padding-top: 15px; color: var(--muted); font-size: 12px; }
+    @media (max-width: 600px) {
+      .page { margin: 16px auto; padding: 28px 22px; }
+      header { align-items: flex-start; gap: 17px; }
+      .portrait-wrap { width: 94px; height: 118px; }
+      h1 { font-size: 30px; }
+      .cat-sticker { width: 42px; height: 40px; }
+      body { font-size: 15px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .cat-tail { animation: none; } }
   </style>
 </head>
 <body>
-  <header>
-    <img class="photo" src="profile.jpg" alt="Photo of Tianwei Jiang">
-    <div>
-      <h1>Tianwei Jiang</h1>
-      <p>Ph.D. student in Electrical and Computer Engineering<br>Georgia Institute of Technology</p>
-      <p><a href="Tianwei_Jiang_dolby_resume.pdf">CV (PDF)</a> · <a href="mailto:tjiang78@gatech.edu">Email</a></p>
-    </div>
-  </header>
+  <main class="page">
+    <header>
+      <div class="portrait-wrap">
+        <img class="portrait" src="profile.jpg" alt="Photo of Tianwei Jiang" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+        <div class="portrait-placeholder" hidden>Add photo</div>
+      </div>
+      <div>
+        <div class="name-line">
+          <h1>Tianwei Jiang</h1>
+          <svg class="cat-sticker" viewBox="0 0 82 68" role="img" aria-label="A small cat sticker">
+            <g class="cat-tail"><path d="M57 49c12 3 20-3 18-11-1-5-6-7-9-4-2 2-1 5 2 6" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/></g>
+            <path d="M22 44c-2-10 1-18 8-23l-1-12 12 8c5-1 10 0 14 2l11-8-1 15c5 5 7 12 5 20-2 11-10 16-24 16S24 56 22 44Z" fill="#f1f1ed" stroke="#111" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="m30 22 5 4m25-1-5 4" stroke="#111" stroke-width="2" stroke-linecap="round"/>
+            <g class="cat-eyes" fill="#111"><ellipse cx="36" cy="39" rx="2" ry="3"/><ellipse cx="54" cy="39" rx="2" ry="3"/></g>
+            <path d="m43 44 3 2 3-2m-3 2v3m0 0-4 2m4-2 4 2M28 43l-8-2m8 6-9 1m39-5 8-2m-8 6 9 1" fill="none" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="role">Ph.D. student · Electrical and Computer Engineering · Georgia Tech</p>
+        <nav class="links" aria-label="Profile links">
+          <a href="Tianwei_Jiang_dolby_resume.pdf">CV</a>
+          <a href="mailto:tjiang78@gatech.edu">Email</a>
+          <a href="https://orcid.org/0009-0006-8490-2600" target="_blank" rel="noopener noreferrer">ORCID</a>
+          <a href="https://www.linkedin.com/in/tianwei-jiang-0408" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
     <section>
       <h2>About</h2>
-      <p>I am a Ph.D. student in ECE at Georgia Tech. I received my B.S. in Audio and Music Engineering and B.A. in Mathematics from the University of Rochester.</p>
-      <p>My research interests include audio perception, sound event detection, sound source localization and spatial audio, audio-visual learning, and multimodal machine learning. I am especially interested in building audio-centered systems that work reliably in real-world settings.</p>
+      <p>I am a Ph.D. student in Electrical and Computer Engineering at Georgia Tech. I earned a B.S. in Audio and Music Engineering and a B.A. in Mathematics from the University of Rochester.</p>
+      <p>My research interests include audio perception, sound event detection, sound source localization and spatial audio, audio-visual learning, and multimodal machine learning. I am especially interested in audio-centered systems that work reliably in real-world settings.</p>
       <p>Outside research, I love K-pop and play piano, classical guitar, and drums. I also enjoy badminton, tennis, and skiing.</p>
     </section>
 
@@ -77,14 +161,16 @@
 
     <section>
       <h2>Selected Papers</h2>
-      <ul>
-        <li>“Human-in-the-Loop Active Learning for Rare Poultry Vocalization Discovery in Long-Term Farm Recordings.” <span class="meta">IEEE MLSP 2026, published.</span></li>
-        <li>“Modality Compensation via Explicit Audio-Visual Correspondence for Multi-Source Sound Localization.” <span class="meta">Submitted to ICASSP 2027.</span></li>
-        <li>“Automatic Discovery of Mixed Call Types and Soft-Label Learning for Pekin Duck Vocalization Classification.” <span class="meta">Submitted to ICASSP 2027.</span></li>
-        <li>“Generalizable HRTF Elevation Modeling Using Relative Binaural Magnitude and Group Delay.” <span class="meta">With Dolby Laboratories; submitted to ICASSP 2027.</span></li>
-        <li>“Elevated Sources and HRTFs: A Boundary Element Study of Ear Shape and Spectral Cues.” <span class="meta">With Dolby Laboratories; under review at JASA.</span></li>
-      </ul>
+      <ol class="papers">
+        <li>“Human-in-the-Loop Active Learning for Rare Poultry Vocalization Discovery in Long-Term Farm Recordings.” <span class="paper-status">IEEE MLSP 2026, published.</span></li>
+        <li>“Modality Compensation via Explicit Audio-Visual Correspondence for Multi-Source Sound Localization.” <span class="paper-status">Submitted to ICASSP 2027.</span></li>
+        <li>“Automatic Discovery of Mixed Call Types and Soft-Label Learning for Pekin Duck Vocalization Classification.” <span class="paper-status">Submitted to ICASSP 2027.</span></li>
+        <li>“Generalizable HRTF Elevation Modeling Using Relative Binaural Magnitude and Group Delay.” <span class="paper-status">With Dolby Laboratories; submitted to ICASSP 2027.</span></li>
+        <li>“Elevated Sources and HRTFs: A Boundary Element Study of Ear Shape and Spectral Cues.” <span class="paper-status">With Dolby Laboratories; under review at JASA.</span></li>
+      </ol>
     </section>
+
+    <footer>Tianwei Jiang · Atlanta, Georgia</footer>
   </main>
 </body>
 </html>
